@@ -151,13 +151,13 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build Docker Image
-      run: docker build -t your-dockerhub-username/app:latest ./app
+      run: docker build -t atuljkamble/app:latest ./app
 
     - name: Login to DockerHub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Push Image
-      run: docker push your-dockerhub-username/app:latest
+      run: docker push atuljkamble/app:latest
 ```
 
 ---
@@ -171,7 +171,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "your-dockerhub-username/app:latest"
+        IMAGE = "atuljkamble/app:latest"
     }
 
     stages {
@@ -220,7 +220,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: your-dockerhub-username/app:latest
+        image: atuljkamble/app:latest
         ports:
         - containerPort: 5000
 ```
