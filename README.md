@@ -121,7 +121,7 @@ end-to-end-cicd-devsecops-pipeline/
 ## 2️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/end-to-end-cicd-devsecops-pipeline.git
+git clone https://github.com/atulkamble/end-to-end-cicd-devsecops-pipeline.git
 cd end-to-end-cicd-devsecops-pipeline
 ```
 
